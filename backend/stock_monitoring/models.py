@@ -11,7 +11,7 @@ class StockSymbol(models.Model):
 class Watchlist(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, blank=True, null=True)
-    symbols = models.ManyToManyField(StockSymbol)
+    symbols = models.ManyToManyField(StockSymbol, blank=True)
     
     def __str__(self):
         return f"{self.user.username}'s Watchlist"

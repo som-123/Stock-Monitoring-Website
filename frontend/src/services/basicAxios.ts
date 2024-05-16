@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 function readCSRFToken() {
@@ -11,11 +12,15 @@ function readCSRFToken() {
 
 export const basicAxios = async (endpoint: string, options: any) => {
   const csrftoken = readCSRFToken();
+  const accessToken = localStorage.getItem('access_token');
+  
   const headers = options?.headers || {
     'Content-Type': 'application/json',
   };
-  if (csrftoken)
-    headers['X-CSRFTOKEN'] = csrftoken;
+
+  if (csrftoken) headers['X-CSRFTOKEN'] = csrftoken;
+  if (accessToken) headers['Authorization'] = `Bearer ${accessToken}`;
+
   const res = await axios({
     baseURL: BACKEND_URL,
     url: endpoint,
