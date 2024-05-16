@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+nav{
+  display:flex;
+}
+.upNav{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  height: 9vh;
+  width: 80vw;
+  border-bottom: 0.7px rgb(165, 165, 165) solid;
+}
+
+.search[type=text] {
+  width: 500px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+.buttons{
+  display: flex;
+  gap: 20px;
+}
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 20vw;
+  height: 9vh;
+  border-bottom: 0.7px rgb(165, 165, 165) solid;
+  border-right: 0.7px rgb(165, 165, 165) solid;
+}
+.bottom{
+  display:flex
+}
+.left{
+  width: 20vw;
+  border-right: 0.7px rgb(165, 165, 165) solid;
+  position:fixed;
+  left:0;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+}
+.btwLine{
+  width: 16vw;
+  height: 1px;
+  background-color: rgb(165, 165, 165);
+  position: relative;
+  left: 2vw;
+}
+.bottom{
+  position: fixed;
+  left: 20vw;
+  padding: 15px 20px;
+}
+.leftUp{
+  padding: 30px;
+}
+.leftDown{
+  padding: 30px;
+}
+.left li{
+  list-style: none;
+  color: grey;
+}
+.left a{
+  text-decoration: none;
+}
+.beige{
+  background-color: beige;
+}
+.navRight, .details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.textDetails{
+  display: flex;
+  flex-direction: column;
+}
+.userEmail{
+  color: rgb(165, 165, 165);
+  font-size: 12px;
+}
