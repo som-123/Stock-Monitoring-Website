@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "1EIVSK6NBAAFN2YM";
+const API_KEY = process.env.REACT_APP_ALPHAVANTAGE_API_KEY;
 
 export const fetchStockPrice = async (symbol: string) => {
   try {
